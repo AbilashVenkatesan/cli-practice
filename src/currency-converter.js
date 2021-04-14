@@ -54,8 +54,21 @@ if(targetCurrency == 'undefined'){
 
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
-
-
+const rates = {
+    USD: {
+        CAD: 1.25,
+        INR: 75.05,
+    },
+    CAD: {
+        USD:0.8,
+        INR: 59.9,
+    },
+    INR: {
+        CAD: 0.016,
+        USD: 0.01,
+    },
+};
+console.log('The Rates are', rates);
 
 // --------------------------------------------------
 // Step 4: Ensure that a conversion rate exists
@@ -66,8 +79,6 @@ if(targetCurrency == 'undefined'){
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
 
-
-
 // --------------------------------------------------
 // Step 5: Perform conversion
 // --------------------------------------------------
@@ -75,8 +86,6 @@ if(targetCurrency == 'undefined'){
 // information, and that a rate exists for each of the currencies.
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
-
-
 
 // --------------------------------------------------
 // Step 6: Display results
