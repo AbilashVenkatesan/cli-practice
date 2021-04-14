@@ -30,8 +30,18 @@ console.log('The Target currency is:',targetCurrency);
 
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
-
-
+if(amount == 'undefined'){
+    console.error("Sorry, Invalid input for amount. Please try again.");
+    process.exit();
+}
+if(initialCurrency == 'undefined'){
+    console.error("Sorry, Invalid input for Initial Currency. Please try again.");
+    process.exit();
+}
+if(targetCurrency == 'undefined'){
+    console.error("Sorry, Invalid input for Target Currency. Please try again.");
+    process.exit();
+}
 
 // --------------------------------------------------
 // Step 3: Define currency conversion rates
