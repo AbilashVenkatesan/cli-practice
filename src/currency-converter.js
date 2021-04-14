@@ -54,7 +54,8 @@ if(targetCurrency == 'undefined'){
 
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
-    USD: {
+const rates = {    
+USD: {
         CAD: 1.25,
         INR: 75.03,
     },
