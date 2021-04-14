@@ -107,3 +107,4 @@ function finalAmount() {
 
 // This message should also include the original amount and currency information
 // supplied by the user.
+console.log(amount ,"in" ,initialCurrency ,"is equal to" ,finalAmount() ,targetCurrency);
