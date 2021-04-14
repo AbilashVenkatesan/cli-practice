@@ -57,15 +57,15 @@ if(targetCurrency == 'undefined'){
 const rates = {
     USD: {
         CAD: 1.25,
-        INR: 75.05,
+        INR: 75.03,
     },
     CAD: {
         USD:0.8,
-        INR: 59.9,
+        INR: 59.97,
     },
     INR: {
-        CAD: 0.016,
-        USD: 0.01,
+        CAD: 0.017,
+        USD: 0.013,
     },
 };
 console.log('The Rates are', rates);
@@ -78,6 +78,17 @@ console.log('The Rates are', rates);
 
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
+const arrayInitialCurrency = rates[initialCurrency];
+const arrayTargetCurrency = rates[targetCurrency];
+
+if(arrayInitialCurrency == 'undefined'){
+    console.error("Whoops, the initial currency is invalid, Received:",initialcurrency);
+    process.exit();
+}
+if(arrayTargetCurrency == 'undefined'){
+    console.error("Whoops, the target currency is invalid, Received:",targetcurrency);
+    process.exit();
+}
 
 // --------------------------------------------------
 // Step 5: Perform conversion
