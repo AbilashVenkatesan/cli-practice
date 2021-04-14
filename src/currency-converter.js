@@ -54,7 +54,6 @@ if(targetCurrency == 'undefined'){
 
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
-const rates = {
     USD: {
         CAD: 1.25,
         INR: 75.03,
@@ -97,6 +96,9 @@ if(arrayTargetCurrency == 'undefined'){
 // information, and that a rate exists for each of the currencies.
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
+function finalAmount() {
+    return amount * rates[initialCurrency][targetCurrency];
+}
 
 // --------------------------------------------------
 // Step 6: Display results
